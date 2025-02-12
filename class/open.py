@@ -1,15 +1,25 @@
-# this is a comment
-""" 
-file = open("names.txt", "a")
-file.write(f"{name}\n")
-file.close() """
+name = input("Enter a name: ")
+file = open("names.txt", "w")
+file.write(name)
+file.close() 
 
-""" names = []
+
+
+
+
+
+
+
+"""
+names = []
 
 with open("names.txt") as file:
     for line in file:
-        name, house = line.rstrip().split(",")
-        print(f"{name} from {house}") """
+        row = line.rstrip().split(",")
+        print(f"{row[0]} from {row[1]}") 
+
+
+
 
 import csv
 
@@ -21,4 +31,4 @@ with open("names.csv") as file:
         students.append({"name": row[0], "house": row[1], "patronus": row[2]})
 
 for student in students:
-    print(f"{student['name']} from {student['house']} with {student['patronus']}")
+    print(f"{student['name']} from {student['house']} with {student['patronus']}")"""
