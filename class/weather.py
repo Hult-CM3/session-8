@@ -7,9 +7,9 @@ response = requests.get(
   params={ 
      "q": city, 
      "appid": API_KEY, 
-     "units": "metric" } ) 
+     "units": "imperial" } ) 
 if response.status_code == 200: 
     weather_data = response.json() 
-    print(f"Temperature in {city}: {weather_data['main']['temp']}°C") 
+    print(f"Temperature in {city}: {weather_data['main']['temp']}°F") 
 else: 
     print("Error fetching weather data")
